@@ -45,8 +45,7 @@ form.addEventListener('submit',function(e) {
     document.getElementById('error-status').innerHTML = 'Please select an status option';
   }
 
-taskManager.addTask(username, description, assignedTo, dueDate,  validateStatus);
-
+taskManager.addTask();
       
 });
 

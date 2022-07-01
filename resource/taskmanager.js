@@ -49,23 +49,10 @@ class TaskManager{
           dueDate: dueDate,
           status: validateStatus,
         };
-
-        console.log(task);    
+                
         this.tasks.push(task);
+        console.log(`$(task.id) \n $(task.username)\n $(task.description)\n $(task.assignedTo)\n $(task.dueDate) \n $(task.validateStatus)`);    
+        return task
       }
-
-      getTaskById(taskId) 
-      {
-        console.log("in get task function");
-          let foundTask;
-          for(let i=0; i< this.tasks.length; i++) {
-              const task = this.tasks[i];
-              if(task.id == taskId) {
-                  foundTask = task;
-              }
-          }
-          console.log(foundTask);
-          return foundTask;
-      }   
-        
+              
 }
