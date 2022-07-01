@@ -33,13 +33,6 @@ class TaskManager{
         
     }
 
-    get tasks() {
-        return this.tasks;
-    }
-    get current_id() {
-        return this.currentid;
-    }
-
     addTask(username, description, assignedTo, dueDate,  validateStatus) {
         const task = {
           id: this.currentId++,
