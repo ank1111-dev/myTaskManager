@@ -47,9 +47,10 @@ class TaskManager{
         console.log(`$(task.id) \n $(task.name)\n $(task.descriptionBox)\n $(task.assignedTo)\n $(task.dueDate) \n $(task.status)`);    
         return task
       }
-              
-}
+ 
+    }
 
 
+     
 //localStorage.setItem("task", JSON.stringify(task));
 

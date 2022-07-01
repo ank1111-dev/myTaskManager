@@ -1,7 +1,7 @@
 //Object Instance to the class
 
-// let taskManager = new TaskManager(0);
-// console.log(taskManager);
+let taskManager = new TaskManager(0);
+console.log(taskManager);
 
 //Getting the input values
 const form = document.getElementById('form');
@@ -25,13 +25,19 @@ let today =  new Date();
   
   console.log(today);
   console.log(dueDate.value);
-  console.log(dueDate.value < today);
+  
 
 
 //Validation Logic
-  function validateForm() {
-  
-   if (username.value.length <= 8 || username.value === "" ) {
+//form.addEventListener("submit", (event) => {
+
+  function submitForm (event) {
+
+  event.preventDefault(); 
+  console.log(`Form submitted!`);
+
+    
+  if (username.value.length <= 8 || username.value === "" ) {
     
     document.getElementById('error-name').innerHTML = "Name should be more then 8 characters";
     }
@@ -58,15 +64,14 @@ let today =  new Date();
     document.getElementById('error-status').innerHTML = 'Please select an status option';
   }
 
-}
+  toAddTasks();
 
-//Adding event listener
-//submitBtn.addEventListener('click', validateForm);
-submitBtn.addEventListener('click', (e) => {
-   e.preventDefault();
-   validateForm();
-  
-  });
+};
+
+//);
+
+form.addEventListener("submit",submitForm)
+
 
 
 //Displaying current date on landing page
