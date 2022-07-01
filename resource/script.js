@@ -24,7 +24,7 @@ let today =  new Date();
   
   console.log(today);
   console.log(dueDate.value);
-  
+  console.log(dueDate.value < today);
 
 
 //Validation Logic
@@ -66,3 +66,18 @@ form.addEventListener('submit',function(e) {
   //taskManager.addTask(username.value, descriptionBox.value, assignedTo.value, dueDate.value,  validateStatus.value);
       
 });
+
+//Displaying current date on landing page
+function currentDate () {
+  const el = document.getElementById('date');
+  const current= new Date();
+  const day =  current.getDate();
+  const month = current.getMonth()+1;
+  const year = current.getFullYear();
+  
+  // returns the final date with backslash (/) separator
+  const date = `${day}/${month}/${year}`;
+  el.textContent = date;
+
+}
+currentDate();
