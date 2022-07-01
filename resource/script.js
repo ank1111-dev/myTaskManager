@@ -1,7 +1,7 @@
 //Object Instance to the class
 
-let taskManager = new TaskManager(0);
-console.log(taskManager);
+// let taskManager = new TaskManager(0);
+// console.log(taskManager);
 
 //Getting the input values
 const form = document.getElementById('form');
@@ -10,6 +10,7 @@ const descriptionBox = document.getElementById('description');
 const assignedTo = document.getElementById('assignedTo');
 const dueDate = document.getElementById('duedate');
 const validateStatus = document.getElementById('status');
+const submitBtn = document.getElementById('submitBTN');
 
 //Due date Logic
 
@@ -60,12 +61,13 @@ let today =  new Date();
 }
 
 //Adding event listener
-form.addEventListener('submit',function(e) { 
-  e.preventDefault();
-  validateForm();
-  //taskManager.addTask(username.value, descriptionBox.value, assignedTo.value, dueDate.value,  validateStatus.value);
-      
-});
+//submitBtn.addEventListener('click', validateForm);
+submitBtn.addEventListener('click', (e) => {
+   e.preventDefault();
+   validateForm();
+  
+  });
+
 
 //Displaying current date on landing page
 function currentDate () {
@@ -81,3 +83,9 @@ function currentDate () {
 
 }
 currentDate();
+
+function toAddTasks() {
+  
+  taskManager.addTask(username.value, descriptionBox.value, assignedTo.value, dueDate.value, validateStatus.value);
+       
+}
