@@ -14,7 +14,7 @@ const validateStatus = document.getElementById('status');
 //Due date Logic
 
 let today =  new Date();
- var dd = today.getDate();
+ var dd = ("0" + today.getDate()).slice(-2);
  var mm = today.getMonth()+1; 
  var yyyy = today.getFullYear();
     if(mm<10)  {
