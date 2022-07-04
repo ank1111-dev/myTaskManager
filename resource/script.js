@@ -66,6 +66,7 @@ let today =  new Date();
     document.getElementById('error-status').innerHTML = 'Please select an status option';
     return false;
   }
+
  //Adding functions to submit button
   toAddTasks();
 

@@ -21,14 +21,6 @@
 .date{
    color: #727475;
 }
-.imgfix{
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  top: 2px;
-}
 
 #date{
   font-size: 25px;
@@ -41,3 +33,10 @@
 small{
   color: red;
 }
+
+/* ul
+{
+  
+    display:inline-block;
+    float:none;
+} */

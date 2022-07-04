@@ -31,12 +31,12 @@
         <div class="container hero mt-3">
           <div class="row">
             <div class="col-12 col-lg-6 col-xl-5 offset-xl">
-              <h1 class="font-weight-bold" style="color: black">
+              <h1 class="title font-weight-bold display-4" style="color: black">
                 Task Schedular
               </h1>
               
               <!-- Button HTML (to Trigger Modal) -->
-              <a href="#myModal" role="button" class="btn btn-lg" style="background-color: rgb(187, 118, 87)" data-bs-toggle="modal"><span style="color:black">Create Task</span></a>
+              <a href="#myModal" role="button" class="btn btn-lg mt-4" style="background-color: rgb(187, 118, 87)" data-bs-toggle="modal"><span style="color:black">Create Task</span></a>
               <!-- Modal Header -->
               
               <div id="myModal" class="modal fade" tabindex="-1">
@@ -136,12 +136,17 @@
         </div>
       </div>     
   </div>
-  <div class="row border">
-    <h2 class="text-center mt-3" style= "padding-left: 100px ;">Task</h2>
-    <div class="col-lg-12 border">      
-      <ul class="list-group" id="tasksList"></ul>
+  <div class="row text-center">
+    <div class=" col-lg-12">
+    <h2 class="mt-3" style= "padding-left: 100px ;">Task</h2>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 h-100 border">   
+       <ul class="list-group d-inline-block float-left" id="tasksList" ></ul>
     </div>
+  </div>
+    
 
 
      <script src="./resource/taskmanager.js"></script>
