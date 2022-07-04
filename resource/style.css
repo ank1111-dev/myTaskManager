@@ -1,0 +1,41 @@
+.header-blue {
+
+  background-size: cover;
+  background-image: url("pexels-karolina-grabowska-5908723.jpg");
+  font-family: "Source Sans Pro", sans-serif;
+  height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .header-blue {
+    padding-bottom: 120px;
+  }
+  #tasksList {
+    padding-right: 220px;
+  }
+}
+
+.task{
+   color: #727475;
+}
+.date{
+   color: #727475;
+}
+
+#date{
+  font-size: 25px;
+}
+
+.p1{
+  font-size: 25px;
+}
+
+small{
+  color: red;
+}
+
+footer {
+  padding:;
+  border-bottom: 1px solid transparent;
+  font-size: 5px;
+}

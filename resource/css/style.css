@@ -4,8 +4,19 @@
   background-image: url("pexels-karolina-grabowska-5908723.jpg");
   font-family: "Source Sans Pro", sans-serif;
   height: 50vh;
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
+
+h2{
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+}
 @media (min-width: 768px) {
   .header-blue {
     padding-bottom: 120px;
@@ -28,15 +39,41 @@
 
 .p1{
   font-size: 25px;
+  margin-right: 300px;
+  color: black;
+
+  
 }
 
 small{
   color: red;
 }
 
-/* ul
-{
+footer{
+  position: fixed;
+  height: 20px;
+  /*background-color: rgb(212, 187, 137);*/
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 12px;
+  color:black;
+}
+
+form{
+  background-color: rgb(222, 209, 189);
+}
+
+.modal-title{
+  margin-left:150px;
+  font-size: 30px;
+  font-style: italic;
   
-    display:inline-block;
-    float:none;
-} */
+}
+
+.submitBTN{
+    background-color:rgb(154, 65, 65);
+    box-sizing: 80% border-box;
+}
