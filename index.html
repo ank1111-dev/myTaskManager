@@ -24,7 +24,7 @@
     <!-- Navigation bar -->
     <div>
       <div class="header-blue">
-        <p class="p1 text-right pr-5 pt-4" style="color:rgb(122, 75, 36)">Date: <span  id="date" ></span></p>
+        <p class="p1 text-right pr-5 pt-4" style="color:black" padding-top="150px">Date: <span  id="date" ></span></p>
   
         
         <!-- Content header  -->
@@ -43,7 +43,7 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Planner</h5>
+                      <h5 class="modal-title">To Do List</h5>
                       <button
                         type="button"
                         class="btn-close"
@@ -120,12 +120,12 @@
                     <div class="modal-footer">
                       <button
                         type="button"
-                        class="btn btn-secondary"
+                        class="btn btn-outline-danger"
                         data-bs-dismiss="modal"
                       >
                         Reset
                       </button>
-                      <button id ="submitBTN" type="submit" class="btn btn-primary">Submit</button>
+                      <button id ="submitBTN" type="submit" class= "btn btn-outline-primary">Submit</button>
                     </div>                       
                   </form> 
                   </div>
@@ -142,11 +142,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-12 h-100 border">   
-       <ul class="list-group d-inline-block float-left" id="tasksList" ></ul>
+    <div class="col-lg-12 h-100">   
+       <ul class="list-group d-inline-block float-container" id="tasksList" ></ul>
     </div>
   </div>
-    
+      
 
 
      <script src="./resource/taskmanager.js"></script>
@@ -162,5 +162,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   </body>
+  <footer>
+    <p>&copy2022 - Ankita, Michele, Mahsa & Vasanti </p>
+  </footer>
 
 </html>
