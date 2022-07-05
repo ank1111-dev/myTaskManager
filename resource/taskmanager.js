@@ -15,12 +15,12 @@ const createTaskHtml = (id, username, descriptionBox, assignedTo, dueDate,  vali
     <br>
     <h6 class="card-subtitle mb-2">Status:  ${validateStatus}</h6>
     <br>
-     <div class="row">
+    <div class="row">
       <div class="col">
-        <a href="#" class="btn btn-primary">Delete</a>
+        <a href="#" class="btn btn-danger delete-button ml-5">Delete</a>
       </div>
       <div class="col">
-        <a href="#" class="btn btn-primary done-button ml-5">Done</a>
+        <a href="#" class="btn btn-success done-button ml-5">Done</a>
       </div>
     </div>
   </div>

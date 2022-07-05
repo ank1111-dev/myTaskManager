@@ -70,10 +70,4 @@ form{
   margin-left:150px;
   font-size: 30px;
   font-style: italic;
-  
-}
-
-.submitBTN{
-    background-color:rgb(154, 65, 65);
-    box-sizing: 80% border-box;
-}
+  }
