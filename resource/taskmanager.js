@@ -20,7 +20,7 @@ const createTaskHtml = (id, username, descriptionBox, assignedTo, dueDate,  vali
         <a href="#" class="btn btn-danger delete-button ml-5">Delete</a>
       </div>
       <div class="col">
-        <a href="#" class="btn btn-success done-button ml-5">Done</a>
+        <a href="#" class="btn btn-success done-button ml-5">Mark as Done</a>
       </div>
     </div>
   </div>
