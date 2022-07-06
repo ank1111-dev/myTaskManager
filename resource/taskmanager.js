@@ -3,7 +3,7 @@
 const createTaskHtml = (id, username, descriptionBox, assignedTo, dueDate,  validateStatus) => {
 
     const newForm = ` 
-    <div class="card text-left mx-3 mb-4 mt-3" style="width: 18rem; box-shadow: 4px 4px ; height: " data-task-id=${id} >
+    <div class="card text-left mx-3 mb-4 mt-4" style="width: 18rem; box-shadow: 4px 4px ; background-color: rgba(235, 214, 205, 0.774);" data-task-id=${id} >
   <div class="card-body">
     <h5 class="card-title">Name:  ${username}</h5>
      <p class="card-subtitle mb-2 mt-1">Description:  ${descriptionBox}</p>
