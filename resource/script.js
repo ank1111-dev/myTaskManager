@@ -1,7 +1,10 @@
 //Object Instance to the class
 
 let taskManager = new TaskManager(0);
-console.log(taskManager);
+//console.log(taskManager);
+
+//Loads data in local storage
+taskManager.loadStorage();
 
 //Getting the input values from Form 
 const form = document.getElementById('form');
@@ -26,8 +29,7 @@ let today =  new Date();
   console.log(today);
   console.log(dueDate.value);
   
-
-
+  
 // Form Validation Logic
   function submitForm (event) {
 
@@ -53,13 +55,11 @@ let today =  new Date();
     return false;
   }
 
-
   if (dueDate.value == '' || dueDate.value < today) {
   
   document.getElementById('error-ddate').innerHTML = "The Date must be Bigger or Equal to today date";
   return false;
   }
-
   
   if (validateStatus.selectedIndex === 0) {
    
@@ -74,8 +74,6 @@ let today =  new Date();
 
 //Event handler for submit button
 form.addEventListener("submit",submitForm)
-
-
 
 //Displaying current date on landing page
 function currentDate () {
@@ -96,6 +94,63 @@ currentDate(); //Calling the current date function
 function toAddTasks() {
   
   taskManager.addTask(username.value, descriptionBox.value, assignedTo.value, dueDate.value, validateStatus.value);
+  taskManager.saveStorage();
   taskManager.render();
-       
+         
 }
+
+/// Mark as Done
+
+let todolist = document.querySelector("#todo");
+let review = document.querySelector("#review");
+let inprogress = document.querySelector("#inprog");
+let done = document.querySelector("#done");
+
+// click events!
+
+todolist.addEventListener("click", updateStatus);
+review.addEventListener("click", updateStatus);
+inprogress.addEventListener("click", updateStatus);
+done.addEventListener("click", updateStatus);
+
+//Function to change the status & mark as done button to done
+
+function updateStatus(event) {
+  
+  if (event.target.classList.contains("done-button")) {
+    const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+    console.log(parentTask);
+    const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    const task = taskManager.getTaskById(taskId);
+    // console.log(task);
+    task.validateStatus = "Done";    
+    
+    //Save locally
+    taskManager.saveStorage();
+    //Display task
+    taskManager.render();
+    
+  }
+
+  //Function to delete task in browser
+
+  if (event.target.classList.contains("delete-button")) {
+
+    if (confirm("Are you sure you want to delete this task?")) {
+      const parentTask =event.target.parentElement.parentElement.parentElement.parentElement;
+      const taskId = Number(parentTask.dataset.taskId);
+      taskManager.deleteTask(taskId);
+
+      //Save locally
+      taskManager.saveStorage();
+      //Display task
+      taskManager.render();
+      }
+  }
+  
+}
+
+taskManager.saveStorage();
+taskManager.render();
+    
